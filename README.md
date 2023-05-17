@@ -45,8 +45,20 @@ Postgres was chosen but the choice was not dictated by any requirements.
 
 ## Development Website Operation
 
+Running the development website is standard for Django, but some basic commands are:
 
 
+|Task   | Command|
+|-------|--------|
+|Start the server | `python3 manage.py runserver 0.0.0.0:80` |
+|Make migration script after updating a model | `python3 manage.py makemigration` |
+|Run the migration script | `python3 manage.py migrate` |
+|Interact with the site (python shell) | `python3 manage.py shell` |
+
+
+## Ingesting data
+
+Example
 
 
 
