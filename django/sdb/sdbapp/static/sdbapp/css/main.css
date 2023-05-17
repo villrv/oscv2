@@ -1,0 +1,332 @@
+/* work-sans-300 - latin */
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Work Sans Light'), local('WorkSans-Light'),
+       url('../fonts/work-sans-v3-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/work-sans-v3-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* work-sans-regular - latin */
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Work Sans'), local('WorkSans-Regular'),
+       url('../fonts/work-sans-v3-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/work-sans-v3-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* work-sans-500 - latin */
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Work Sans Medium'), local('WorkSans-Medium'),
+       url('../fonts/work-sans-v3-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/work-sans-v3-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* work-sans-800 - latin */
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 800;
+  src: local('Work Sans ExtraBold'), local('WorkSans-ExtraBold'),
+       url('../fonts/work-sans-v3-latin-800.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/work-sans-v3-latin-800.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* work-sans-900 - latin */
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Work Sans Black'), local('WorkSans-Black'),
+       url('../fonts/work-sans-v3-latin-900.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/work-sans-v3-latin-900.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+html, body {
+    height: 100%;
+    margin: 0px;
+/*    color: #ebecec; */
+    color: #404040;
+    background-color: #ebecec;
+/*    background-color: #f7f7f7;  */
+}
+
+
+p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+p#note {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+div.sdb-search {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+/*    background-color: #f0f0f0; */
+    background-color: #e0e0e0;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #777777, 0 0 0 2px #a8a8a8;
+}
+
+table#sdb-search {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    width: 90%;
+    font-size: 10px;
+}
+
+input[type="text"].search_num {
+    width: 90px;
+}
+
+input[type="number"].search_num {
+    width: 90px;
+}
+
+input[type="text"].search_date {
+    width: 90px;
+}
+
+
+input#yes {
+    margin-left: 20px;
+}
+input#no {
+    margin-left: 20px;
+}
+
+strong.ldap {
+    font-size: 90%;
+}
+
+strong.question {
+    font-size: 90%;
+}
+
+input.ldap {
+    width: 100%;
+}
+
+textarea#address {
+    width: 100%;
+}
+
+input[type="text"], textarea, input[type="number"] {
+  background-color : #e7e7e7; 
+  width: 100%;
+  font-weight: 400;
+  font-size: 90%;
+  border: 1px solid #777777;
+  box-shadow: none;
+  padding-left: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-radius: 4px;
+}
+
+caption {
+    padding: 5px;
+    text-align: left;
+    font-size: 90%;
+}
+
+label {
+    font-weight: bold;
+    font-size: 90%;
+}
+
+span.small {
+    font-weight: light;
+    font-size: 80%;
+}
+
+h1,h2,h3 {
+    text-align: center;
+}
+
+span.user {
+    color: #4040d0;
+}
+
+#headerText {
+    font-size: 80px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#headerimageContainer {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+#sdbImage {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 200px;
+}
+
+td {
+    padding: 4px;
+}
+
+button#submit {
+    display: inline-block;
+    border: none;
+    text-align: center;
+    border-radius: 10px;
+    width: 30%;
+    height: 40px;
+/*    background-color: #40c040; */
+    background-color: #366caf;
+    color: #e0e0e0;
+}
+
+button#submit:hover {
+    background-color: #3c74db;    
+}
+
+div.button {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    margin-top: 40px;
+}
+
+p.centered {
+    text-align: center;
+}
+
+p.footer {
+    margin-top: 30px;
+    font-size: 90%;
+}
+
+label#cv {
+    margin-right: 10px;
+}
+
+input[type="file"]::file-selector-button {
+    border: none;
+    margin-right: 10px;
+    padding: 5px;
+    border-radius: 4px;    
+/*    background-color: #aaaaaa; */
+    background-color: #366caf;
+    color: #e0e0e0;
+}
+
+input[type="file"]::file-selector-button:hover {
+/*    background-color: #507aed;    */
+    background-color: #3c74db;    
+}
+
+span.domain {
+    font-family: monospace;
+}
+
+/* Get rid of arrows for numeric input */
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/*
+ *   Create a popup modal dialog to display form submission errors.
+ * 
+ */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modalContent {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Span */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#results {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+    max-width: 80%;
+}
+
+#results tr {
+    font-size: 12px;
+}
+
+.rname {
+    padding-right: 15px;
+    text-align: left;
+}
+
+.rtypes {
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+}
+
+.raliases {
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: left;
+    max-width: 30%;
+}
+
+.rrow {
+    width: 80%;
+}
+
+.rrow:nth-child(even) {background-color: #f7f7f7; }
+.rrow:nth-child(odd) {background-color: #dadada; }

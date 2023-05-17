@@ -1,0 +1,44 @@
+{% load static %}
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'sdbapp/css/w3.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'sdbapp/css/main.css' %}">
+</head>
+  <body>
+    <header>
+      <div id="headerImageContainer">
+        <img id="sdbImage" src="{% static 'sdbapp/sdb-bw-1.png' %}">
+        <div id="headerText">Supernova DB</div>
+      </div>
+    </header>
+
+<form action="/sdb/" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <div class="button"><button type="submit" id="submitChange" name="submit" value="submitChange">Submit Query</button></div>
+
+<center>
+{% for obj in page_obj.object_list %}
+  <p>{{ obj.name }}</p>
+{% endfor %}
+</center>
+
+{% if show_results %}
+<div class="pageNav">
+        {%if page_obj.has_previous %} {# whether the previous page exists #}
+	    <button type="submit" id="pageNav" name="submit" value="prev"><</button>
+        {% endif %}
+        <span>{{page_obj.number}}</span> {# the current page number #}
+        {%if page_obj.has_next %} {# whether the next page exists #}
+	    <button type="submit" id="pageNav" name="submit" value="next">></button>
+        {% endif %}
+<div class="pageNav">
+{% endif %}
+</form>
+
+<footer class="w3-container w3-dark-grey3" ><p class="footer centered">Questions? Contact: sdb-admin@sdb.risedemo.org.</p>
+<script src="{% static 'sdbapp/sdb.js' %}"></script>
+</footer>
+</body>
+</html>
