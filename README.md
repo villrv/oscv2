@@ -43,6 +43,11 @@ Python/Django to the supernova data would be a standard SQL database.
 
 Postgres was chosen but the choice was not dictated by any requirements.
 
+## Running Postgres and Opensearch
+
+Docker compose files for running Postgres and Opensearch are in [the docker directory](docker/).
+
+
 ## Development Website Operation
 
 Running the development website is standard for Django, but some basic commands are:
@@ -56,9 +61,9 @@ Running the development website is standard for Django, but some basic commands 
 |Interact with the site (python shell) | `python3 manage.py shell` |
 
 
-## Ingesting data
+## Ingesting data into Elasti
 
-Example
+Example 
 
 
 
