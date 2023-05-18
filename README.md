@@ -14,6 +14,9 @@ Authoritative Supernova data is stored in git repositories:
 * https://github.com/astrocatalogs/sne-2015-2019
 * https://github.com/astrocatalogs/sne-2020-2024
 
+At some point, these repositories should be forked so that we can 
+write new data.
+
 ## Web Frontend
 
 Several web technologies/frameworks were experimented with:
@@ -61,9 +64,55 @@ Running the development website is standard for Django, but some basic commands 
 |Interact with the site (python shell) | `python3 manage.py shell` |
 
 
-## Ingesting data into Elasti
+## Ingesting data into OpenSearch
 
-Example 
+The script for indexing a repo in OpenSearch (a fork of ElasticSearch) is [elastic/indexRepoElastic.pl](elastic/indexRepoElastic.pl).
 
+The script currently has some hard coded values that have to be modified. The most important is `repoDir`. You have to specify
+a `USERNAME:PASSWORD` string as the environment variable `ELASTIC_CREDS`.
+
+Example command:
+```
+   export ELASTIC_CREDS=user:pass
+   /indexRepoElastic.pl  --dir=sne-2010-2014 --repoURL='https://github.com/astrocatalogs/sne-2010-2014.git'
+
+```
+It is better to have the string in a file and do ``ELASTIC_CREDS=`cat foo.creds``` to avoid saving the creds in a shell history file.
+
+## Ingesting data into Postgres
+
+The script for indexing a reop in Postgres is [postgres/indexRepoPg.pl](postgres/indexRepoPg.pl).
+
+The script currently has some hard coded values. Replace the string `REDACTED_PASSWORD` with the password for a dabase named `sdb`.
+
+Example command:
+```
+    /indexRepoPg.pl  --dir=sne-2010-2014 --repoURL='https://github.com/astrocatalogs/sne-2010-2014.git'
+```
+
+### The Supernova Data Model
+
+The model is defined in Django in [django/sdb/sdbapp/models.py](django/sdb/sdbapp/models.py).
+
+If you change the model, you have to do:
+```
+   python3 manage.py makemigration
+   python3 manage.py migrate
+```
+
+to update the database structure.
+
+You will then have to modify [postgres/indexRepoPg.pl](postgres/indexRepoPg.pl), drop all of the data and 
+reindex the repos. You could conceivably write a scritp to just insert the data appropriate to the change,
+but reindexing is probably safer and easier.
+
+While often Django is used to allow users to write the database objects, we don't because the DB isn't
+authoritative. Eventually we might want to allow users to submit new data, but when we do, they will
+submit it, there will be a review process likely involving a human, and eventually the data will be
+added to a git repo and then indexed.
+
+### TODO
+
+  [ ] 
 
 
