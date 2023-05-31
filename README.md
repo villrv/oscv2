@@ -110,12 +110,12 @@ added to a git repo and then indexed.
 
 ### Completed
 
-1. _Django:_ Project Structure
-2. _Model:_ Most of the work on the Model. Some fields may need to be added, but it is reasonably complete. Adding additional fields is straightforward (described above).
-3. _Pagination:_ Pagination has been implemented. 
-4. _Search:_ The basic search structure has been implemented.
+1. __Django:__ Project Structure
+2. __Model:__ Most of the work on the Model. Some fields may need to be added, but it is reasonably complete. Adding additional fields is straightforward (described above).
+3. __Pagination:__ Pagination has been implemented. 
+4. __Search:__ The basic search structure has been implemented.
 
 ### TODO
 
-1. _Search:_ Complete the implementation of the search functionality.
-2. _Search:_ Style the search form.
+1. __Search:__ Complete the implementation of the search functionality.
+2. __Search:__ Style the search form.
