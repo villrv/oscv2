@@ -44,12 +44,11 @@ Initially, the site was to be based on OpenSearch. As the design of the site evo
 a set of CGI scripts to Django, it became apparent that the least effort method of interfacing
 Python/Django to the supernova data would be a standard SQL database.
 
-Postgres was chosen but the choice was not dictated by any requirements.
+Postgres was chosen but the choice was not dictated by any requirements. MySQL would probably perform just as well. There may be some differences in text searching. 
 
 ## Running Postgres and Opensearch
 
 Docker compose files for running Postgres and Opensearch are in [the docker directory](docker/).
-
 
 ## Development Website Operation
 
@@ -102,17 +101,21 @@ If you change the model, you have to do:
 
 to update the database structure.
 
-You will then have to modify [postgres/indexRepoPg.pl](postgres/indexRepoPg.pl), drop all of the data and 
-reindex the repos. You could conceivably write a scritp to just insert the data appropriate to the change,
-but reindexing is probably safer and easier.
+You will then have to modify [postgres/indexRepoPg.pl](postgres/indexRepoPg.pl), drop all of the data and reindex the repos. You could conceivably write a scritp to just insert the data appropriate to the change, but reindexing is probably safer and easier.
 
 While often Django is used to allow users to write the database objects, we don't because the DB isn't
 authoritative. Eventually we might want to allow users to submit new data, but when we do, they will
 submit it, there will be a review process likely involving a human, and eventually the data will be
 added to a git repo and then indexed.
 
+### Completed
+
+1. *Django:* Project Structure
+2. *Model:* Most of the work on the Model. Some fields may need to be added, but it is reasonably complete. Adding additional fields is straightforward (described above).
+3. *Pagination:* Pagination has been implemented. 
+4. *Search:* The basic search structure has been implemented.
+
 ### TODO
 
-  [ ] 
-
-
+1. *Search:* Complete the implementation of the search functionality.
+2. *Search:* Style the search form.
